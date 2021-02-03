@@ -111,3 +111,10 @@ function checkVolume(volume) {
         honkBtn.disabled = false;
     }
 }
+
+/* To prevent reload */
+partyHornForm.addEventListener('submit', preventReload);
+function preventReload(event) {
+    event.preventDefault();
+    hornSound.play();
+}
