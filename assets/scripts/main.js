@@ -57,3 +57,21 @@ function changeHornSound(event) {
         hornSound.src = "./assets/media/audio/party-horn.mp3";
     }
 }
+
+/* 
+    Based on radio selection, change the image. 
+*/
+audioSelection.addEventListener('change', changeSoundImage);
+function changeSoundImage(event) {
+    let sound = event.target.id;
+
+    if (sound == "radio-air-horn") {
+        soundImage.src = "./assets/media/images/air-horn.svg";
+    } 
+    else if (sound == "radio-car-horn") {
+        soundImage.src = "./assets/media/images/car.svg";
+    } 
+    else if (sound == "radio-party-horn"){
+        soundImage.src = "./assets/media/images/party-horn.svg";
+    }
+}
