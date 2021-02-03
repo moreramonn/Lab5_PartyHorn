@@ -17,3 +17,17 @@ var audioSelection = document.getElementById('audio-selection');
 var hornSound = document.getElementById('horn-sound');
 
 var honkBtn = document.getElementById('honk-btn');
+
+/*
+    Get the volume with either changing number or using slider.
+    Change number with slider and vice versa.
+    Call functions to check volume, change volume, and icon images.
+*/
+volumeNumber.addEventListener('input', getVolume);
+volumeSlider.addEventListener('input', getVolume);
+function getVolume(event) {
+    let volume = event.target.value;
+    volumeSlider.value = volume;
+    volumeNumber.value = volume;
+}
+
