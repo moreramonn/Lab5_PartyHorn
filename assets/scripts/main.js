@@ -18,6 +18,13 @@ var hornSound = document.getElementById('horn-sound');
 
 var honkBtn = document.getElementById('honk-btn');
 
+/* To prevent reload */
+partyHornForm.addEventListener('submit', preventReload);
+function preventReload(event) {
+    event.preventDefault();
+    hornSound.play();
+}
+
 /*
     Get the volume with either changing number or using slider.
     Change number with slider and vice versa.
@@ -110,11 +117,4 @@ function checkVolume(volume) {
     else {
         honkBtn.disabled = false;
     }
-}
-
-/* To prevent reload */
-partyHornForm.addEventListener('submit', preventReload);
-function preventReload(event) {
-    event.preventDefault();
-    hornSound.play();
 }
