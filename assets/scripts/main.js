@@ -18,7 +18,6 @@ var hornSound = document.getElementById('horn-sound');
 
 var honkBtn = document.getElementById('honk-btn');
 
-
 /*
     Get the volume with either changing number or using slider.
     Change number with slider and vice versa.
