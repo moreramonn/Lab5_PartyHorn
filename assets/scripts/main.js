@@ -39,3 +39,21 @@ function getVolume(event) {
 function changeVolume(volume) {
     hornSound.volume = volume / volumeNumber.max;
 }
+
+/* 
+    Based on radio selection, change the sound. 
+*/
+audioSelection.addEventListener('change', changeHornSound);
+function changeHornSound(event) {
+    let sound = event.target.id;
+
+    if (sound == "radio-air-horn") {
+        hornSound.src = "./assets/media/audio/air-horn.mp3";
+    } 
+    else if (sound == "radio-car-horn") {
+        hornSound.src = "./assets/media/audio/car-horn.mp3";
+    } 
+    else if (sound == "radio-party-horn"){
+        hornSound.src = "./assets/media/audio/party-horn.mp3";
+    }
+}
