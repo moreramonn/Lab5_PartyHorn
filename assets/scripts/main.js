@@ -18,12 +18,6 @@ var hornSound = document.getElementById('horn-sound');
 
 var honkBtn = document.getElementById('honk-btn');
 
-/* To prevent reload */
-partyHornForm.addEventListener('submit', preventReload);
-function preventReload(event) {
-    event.preventDefault();
-    hornSound.play();
-}
 
 /*
     Get the volume with either changing number or using slider.
@@ -47,6 +41,13 @@ function getVolume(event) {
 */
 function changeVolume(volume) {
     hornSound.volume = volume / volumeNumber.max;
+}
+
+/* To prevent reload */
+partyHornForm.addEventListener('submit', preventReload);
+function preventReload(event) {
+    event.preventDefault();
+    hornSound.play();
 }
 
 /* 
