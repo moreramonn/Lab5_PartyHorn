@@ -29,7 +29,9 @@ function getVolume(event) {
     let volume = event.target.value;
     volumeSlider.value = volume;
     volumeNumber.value = volume;
+    checkVolume(volume);
     changeVolume(volume);
+    changeVolumeIcon(volume);
 }
 
 /*
@@ -91,5 +93,21 @@ function changeVolumeIcon(volume) {
     } 
     else {
         volumeImage.src = "./assets/media/icons/volume-level-0.svg";
+    }
+}
+
+/* 
+    Check volume.
+    If volume is 0, disable button.
+    If volume is >1, button is available.
+*/
+function checkVolume(volume) {
+    honkBtn.disabled = false;
+
+    if (volume == 0) {
+        honkBtn.disabled = true;
+    }
+    else {
+        honkBtn.disabled = false;
     }
 }
