@@ -75,3 +75,21 @@ function changeSoundImage(event) {
         soundImage.src = "./assets/media/images/party-horn.svg";
     }
 }
+
+/*
+    Change the volume icon depending on volume-level.
+*/
+function changeVolumeIcon(volume) {
+    if (volume >= 67 && volume <= 100) {
+        volumeImage.src = "./assets/media/icons/volume-level-3.svg";
+    } 
+    else if (volume >= 34 && volume <= 66) {
+        volumeImage.src = "./assets/media/icons/volume-level-2.svg";
+    } 
+    else if (volume >= 1 && volume <= 33) {
+        volumeImage.src = "./assets/media/icons/volume-level-1.svg";
+    } 
+    else {
+        volumeImage.src = "./assets/media/icons/volume-level-0.svg";
+    }
+}
