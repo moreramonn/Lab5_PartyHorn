@@ -29,5 +29,13 @@ function getVolume(event) {
     let volume = event.target.value;
     volumeSlider.value = volume;
     volumeNumber.value = volume;
+    changeVolume(volume);
 }
 
+/*
+    Increase/decrease volume based on volume number.
+    Can use volumeNumber or volumeSlider
+*/
+function changeVolume(volume) {
+    hornSound.volume = volume / volumeNumber.max;
+}
